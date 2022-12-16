@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Inter:wght@100;400;500;700&family=La+Belle+Aurore&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+
+}
+:root{
+    --degisik:'La Belle Aurore', cursive;
+    --barlow: 'Barlow,sans-serif';
+    --inter: Inter,sans-serif;
+}
+
+body {
+    background-color: #1D1D1D;
+    height: 300vh;
+}
+.container{
+    display: flex;
+}
+aside {
+    width: 500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-right: 50px;
+    text-align: center;
+
+}
+.aside-menu{
+    position: fixed;
+    top: 0;
+}
+.aktif{
+    font-size: 20px;
+    display: none;
+
+}
+#aktif2{
+    display: none;
+
+}
+@media screen and (min-width:900px){
+    .aktif1{
+        display: none;
+    }
+}
+@media screen and (max-width:680px){
+    .article-1 .aktif{
+        display: block;
+        z-index: 2 !important;
+        margin-left: 300px;
+        font-size: 50px;
+        margin-top: -150px;
+        margin-bottom: 150px;
+        
+    }
+    .aside-menu{
+        position: fixed;
+        min-width: 100%;
+        height: 100%;
+        background: rgb(194, 189, 189);
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 30px;
+        display: none;
+        justify-content: space-evenly;
+        transition: 1s all;
+        z-index: 1;
+    }
+    
+    #aktif2:checked~.aside-menu{
+        display: block; 
+        left: 0;
+        transition: 1s all;
+    }
+}
+
+aside .aside-menu ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #807A79;
+}
+
+aside ul li {
+    transition: 0.3s all ease;
+    color: #807A79;
+}
+
+aside ul li a {
+
+    color: #807A79;
+    text-decoration: none;
+}
+
+aside ul li:hover {
+    letter-spacing: 0.5px;
+}
+
+aside ul li:hover::before {
+    content: '<';
+    color: brown;
+
+}
+
+aside ul li:hover::after {
+    content: '/>';
+    color: brown;
+
+}
+
+.aside-menu .sosyal {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.sosyal i {
+    color: brown;
+    font-size: 25px;
+    margin-left: 10px;
+
+}
+
+aside span {
+    margin-top: 2rem;
+    color: #807A79;
+    font-size: 0.8rem;
+}
+.article-1{
+    margin-top: 10rem;
+
+}
+#section-1{
+    margin-bottom: 5rem;
+}
+#section-1 h1{
+    font-family: Barlow,sans-serif;
+    font-size: 6rem;
+    color: white;
+    position: relative;
+}
+#section-1 h1::before{
+    content: '<h1>';
+    color: #807A79;
+    position: absolute;
+    top: -40px;
+    font-size: 2rem;
+    font-family: var(--degisik);
+    
+}
+#section-1 h1::after{
+    content: '</h1>';
+    color: #807A79;
+    position: absolute;
+    bottom: 0;
+    right: 650px;
+    font-size: 2rem;
+    font-family: var(--degisik);
+    
+}
+.section-2{
+    margin-bottom: 150px;
+}
+.section-2 p{
+    font-family: Inter,sans-serif;
+    font-weight: 100;
+    color: #807A79;
+    font-size: 1.5rem;
+    position: relative;
+    margin-bottom: 3rem;
+}
+.section-2 p::before{
+    content: '<p>';
+    position: absolute;
+    font-family: var(--degisik);
+    top: -3rem;
+    
+}
+.section-2 p::after{
+    content: '</p>';
+    font-family: var(--degisik);
+    position: absolute;
+    right:1050px;
+}
+.section-2 a{
+    padding: 1.1rem 3rem;
+    text-decoration: none;
+    border: 1px solid brown;
+    font-size: 1.5rem;
+    color: brown;
+    letter-spacing: 1px;
+    text-align: center;
+    background: -webkit-linear-gradient(0deg,transparent 35%,#fff 35%);
+    background-size: 820px 160px;
+    transition: all 0.5s ease-in-out;
+    opacity: .9;
+}
+.section-2 a:hover{
+    border: none;
+    background-position: 410px 80px;
+
+} 
+.section-3 h2{
+    font-weight: 500;
+    font-family: Barlow,sans-serif;
+    font-size: 4rem;
+    color: brown;
+    position: relative;
+    margin-bottom: 80px;
+}
+.section-3 h2::before{
+    content: '<h2>';
+    position: absolute;
+    top: -40px;
+    font-family: var(--degisik);
+    font-size: 2rem;
+    color: #807A79;
+}
+.section-3 h2::after{
+    content: '</h2>';
+    position: absolute;
+    bottom: -10px;
+    right: 65rem;
+    font-family: var(--degisik);
+    font-size: 2rem;
+    color: #807A79;
+}
+.section-3 p{
+    font-family: Inter,sans-serif;
+    font-weight: 100;
+    font-size: 1.4rem;
+    color: whitesmoke;
+    position: relative;
+}
+.section-3 p::before{
+    content: '<p>';
+    font-family: var(--degisik);
+    position: absolute;
+    top: -45px;
+    color: #807A79;
+}
+.section-3 p::after{
+    content: '</p>';
+    font-family: var(--degisik);
+    position: absolute;
+    right: 800px;
+    color: #807A79;
+}
+.section-4{
+    margin-top: 6rem;
+    margin-bottom: 10rem
+
+}
+.section-4 p{
+    color: whitesmoke;
+    font-family: Inter,sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 9rem;
+}
+.section-4 ol{
+    list-style: decimal;
+    font-family: var(--inter);
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-size: 1.1rem;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px;
+}
+.section-4 ol li{
+    color: #807A79;
+    list-style: decimal;
+    counter-increment: li;
+}
+.section-4 ol li::marker{
+    content: counter(li) " > ";
+    color: brown;
+
+}
+.section5 h2{
+    font-weight: 500;
+    font-family: Barlow,sans-serif;
+    font-size: 4rem;
+    color: brown;
+    position: relative;
+    margin-bottom: 80px;
+}
+.section5 h2::after{
+    content: '</h2>';
+    position: absolute;
+    bottom: -10px;
+    right: 63rem;
+    font-family: var(--degisik);
+    font-size: 2rem;
+    color: #807A79;
+}
+.section5 h2::before{
+    content: '<h2>';
+    position: absolute;
+    top: -40px;
+    font-family: var(--degisik);
+    font-size: 2rem;
+    color: #807A79;
+}
+.section5 p{
+    font-family: Inter,sans-serif;
+    font-weight: 100;
+    font-size: 1.4rem;
+    color: whitesmoke;
+    position: relative;
+}
+.section5 p::before{
+    content: '<p>';
+    font-family: var(--degisik);
+    position: absolute;
+    top: -45px;
+    color: #807A79;
+}
+.section5 p::after{
+    content: '</p>';
+    font-family: var(--degisik);
+    position: absolute;
+    right: 920px;
+    color: #807A79;
+}
+.section-6{
+    margin-top: 5rem;
+
+}
+.section-6 h3{
+    font-weight: 500;
+    font-family: Barlow,sans-serif;
+    font-size: 2rem;
+    color: brown;
+    position: relative;
+    margin-bottom: 80px;
+}
+.section-6 h3::before{
+    content: '<h3>';
+    position: absolute;
+    top: -40px;
+    font-family: var(--degisik);
+    font-size: 2rem;
+    color: #807A79;
+}
+.section-6 h3::after{
+    content: '</h3>';
+    position: absolute;
+    right: 62rem;
+    font-family: var(--degisik);
+    font-size: 2rem;
+    color: #807A79;
+}
+.ilk{
+    display: flex;
+    column-gap: 2rem;
+    margin-bottom: 2rem;
+}
+.ilk p{
+    margin-top: 5rem;
+    font-family: Inter,sans-serif;
+    font-weight: 100;
+    font-size: 1.4rem;
+    color: whitesmoke;
+    position: relative;
+    margin-bottom: 3rem;
+}
+.ilk p::before{
+    content: '<p>';
+    font-family: var(--degisik);
+    position: absolute;
+    top: -45px;
+    color: #807A79;
+}
+.ilk:nth-child(2) p::after{
+    content: '</p>';
+    font-family: var(--degisik);
+    position: absolute;
+    right: 27rem;
+    color: #807A79;
+}
+.ilk:nth-child(3) p::after{
+    content: '</p>';
+    font-family: var(--degisik);
+    position: absolute;
+    right: -50px;
+    color: #807A79;
+}
+.ilk:nth-child(4) p::after{
+    content: '</p>';
+    font-family: var(--degisik);
+    position: absolute;
+    right: -50px;
+    color: #807A79;
+}
+.ilk:nth-child(5) p::after{
+    content: '</p>';
+    font-family: var(--degisik);
+    position: absolute;
+    right: -50px;
+    color: #807A79;
+}
+.text .right-span{
+    margin-right: 2rem;
+}
+.text span{
+    padding: 5px 10px;
+    background-color: hsla(0,0%,69%,.035);
+    color: #fff;
+    border-radius: 5px;
+    font-family: Barlow,sans-serif;
+    font-size: 1rem;
+    letter-spacing: .5px;
+    margin: 0;
+    padding: 0.4rem;
+}
+.tanitim{
+    margin-top: 3rem;
+    display: flex;
+    column-gap: 1.5rem;
+    font-size: 30px;
+
+}
+.tanitim a{
+    color: whitesmoke;
+}
+.section6{
+    margin-top: 10rem;
+}
+.section6 h2{
+    font-weight: 500;
+    font-family: Barlow,sans-serif;
+    font-size: 3.5rem;
+    color: brown;
+    position: relative;
+    margin-bottom: 80px;
+}
+.section6 h2::before{
+    content: '<h2>';
+    position: absolute;
+    top: -40px;
+    font-family: var(--degisik);
+    font-size: 2rem;
+    color: #807A79;
+}
+.section6 h2::after{
+    content: '</h2>';
+    position: absolute;
+    bottom: -10px;
+    right: 49rem;
+    font-family: var(--degisik);
+    font-size: 2rem;
+    color: #807A79;
+}
+.section6 p{
+    font-family: var(--inter);
+    font-weight: 100;
+    font-size: 1.4rem;
+    color: whitesmoke;
+    position: relative;
+    margin-bottom: 4rem;
+}
+.section6 p::before{
+    content: '<p>';
+    font-family: var(--degisik);
+    position: absolute;
+    top: -45px;
+    color: #807A79;
+}
+.section6 p:after{
+    content: '</p>';
+    font-family: var(--degisik);
+    position: absolute;
+    right: 300px;
+    color: #807A79;
+}
+.section6 a{
+    
+    padding: 1.1rem 3rem;
+    text-decoration: none;
+    border: 1px solid brown;
+    font-size: 1.5rem;
+    color: brown;
+    letter-spacing: 1px;
+    text-align: center;
+    background: -webkit-linear-gradient(0deg,transparent 35%,#fff 35%);
+    background-size: 820px 160px;
+    transition: all 0.5s ease-in-out;
+    opacity: .9;
+}
+.section6 a:hover{
+    border: none;
+    background-position: 410px 80px;
+}
+.section6{
+    margin-bottom: 10rem;
+}
+footer{
+    
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .copy{
+    text-decoration: none;
+    font-family: var(--degisik);
+    color: #807A79;
+    opacity: .7;
+    margin: auto;
+}
+footer .top-arrow{
+    margin-left: auto;
+    margin-right: 5rem;
+    color: #807A79;
+    padding: 10px;
+    border: 2px solid #807A79;
+    border-radius: 50rem;
+
+}
+@media screen and (max-width:680px){
+    .container{
+        margin-right: 50px;
+        
+    }
+    #section-1 h1{
+        max-width: 300px;
+        font-size: 50px;
+        margin-bottom: 200px;
+    }
+    #section-1 h1::after{
+        content: '</h1>';
+        color: #807A79;
+        position: absolute;
+        bottom: -10px;
+        right: -5px;
+        font-size: 2rem;
+        font-family: var(--degisik);
+        
+    }
+    .section-2 p{
+        max-width: 410px;
+        margin-bottom: 100px;
+    }
+    .section-2 p::after{
+        content: '</p>';
+        font-family: var(--degisik);
+        position: absolute;
+        right:40px;
+    }
+    .section-3 h2{
+        max-width: 350px;
+    }
+    .section-3 h2::after{
+        right: 0;
+    }
+    .section-3 p{
+        max-width: 350px;
+    }
+    .section-3 p::after{
+        right: 50px;
+
+    }
+    .section-4 p{
+        max-width: 350px;
+    }
+    .section-4 ol{
+        list-style: decimal;
+        font-family: var(--inter);
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+        font-size: 1.1rem;
+        margin-left: 30px;
+        display: grid;
+        grid-template-columns: repeat(3,70px);
+        
+    }
+    .section5 h2{
+        max-width: 350px;
+    }
+    .section5 h2::after{
+    right: 0;
+    }
+    .section5 p{
+        max-width: 350px;
+    }
+    .section5 p::after{
+        right: 180px;
+
+    }
+    .section-6 h3{
+        max-width: 350px;
+    }
+    .section-6 h3::after{
+        right: 0;
+        bottom: -50px;
+    }
+    .ilk{
+        display: flex;
+        flex-direction: column;
+    }
+    .ilk img{
+        max-width: 350px;
+    }
+    .ilk p{
+        max-width: 350px;
+    }
+    .ilk:nth-child(2) p::after{
+        right: 80px;
+    }
+    .ilk:nth-child(3) p::after{
+        right: 50px;
+    }
+    .ilk:nth-child(4) p::after{
+        right: 270px;
+    }
+    .ilk:nth-child(5) p::after{
+        right: 150px;
+    }
+    .section6 h2{
+        max-width: 350px;
+    }
+    .section6 h2::after{
+        right: 0;
+        bottom: -50px;
+    }
+    .section6 p:after{
+        right: 180px;
+    }
+    footer .top-arrow{
+        margin-right:1rem;
+    
+    }
+}
