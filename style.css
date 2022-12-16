@@ -13,6 +13,26 @@
     --barlow: 'Barlow,sans-serif';
     --inter: Inter,sans-serif;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #1D1D1D;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: brown;
+    border-radius: 30px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
 body {
     background-color: #1D1D1D;
